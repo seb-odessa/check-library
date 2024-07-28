@@ -132,10 +132,7 @@ fn main() -> Result<(), io::Error> {
     let root = Path::new("/lib.rus.ec");
     let md5sum = Path::new("/lib.rus.ec/librusec_local.md5");
     let cache = Path::new("/lib.rus.ec/md5_cache.json");
-    // let regex = Regex::new(r"^fb2-\d+-\d+(_lost)?\.zip$").unwrap();
-
-    let regex = Regex::new(r"^fb2-0\d+-\d+(_lost)?\.zip$").unwrap();
-
+    let regex = Regex::new(r"^fb2-\d+-\d+(_lost)?\.zip$").unwrap();
     check_integrity(root, md5sum, cache, &regex)?;
     Ok(())
 }
